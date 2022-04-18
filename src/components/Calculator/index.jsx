@@ -40,28 +40,36 @@ export const Calculator = () => {
 
   return(
     <div className="calculator">
-      <div>
+      <div className="bill">
         Bill
         <Input type="number" handleChange={handleBillInput}  />
       </div>
-      <div>
+      <div className="tip">
         Select Tip %
-        <Button type="button" handleClick={handleClick} text='5%' value={0.05} />
-        <Button type="button" handleClick={handleClick} text='10%' value={0.10} />
-        <Button type="button" handleClick={handleClick} text='15%' value={0.15} />
-        <Button type="button" handleClick={handleClick} text='25%' value={0.25} />
-        <Button type="button" handleClick={handleClick} text='50%' value={0.50} />
+        <div>
+          <Button type="button" handleClick={handleClick} text='5%' value={0.05} />
+          <Button type="button" handleClick={handleClick} text='10%' value={0.10} />
+          <Button type="button" handleClick={handleClick} text='15%' value={0.15} />
+          <Button type="button" handleClick={handleClick} text='25%' value={0.25} />
+          <Button type="button" handleClick={handleClick} text='50%' value={0.50} />
+        </div>
       </div>
-      <div>
+      <div className="people">
         Number of people
         <Input type="number" handleChange={handlePeopleInput} />
       </div>
-      <div>
-        <div>
-          <p>Tip Amount <span>/ person</span>{resultBill.toFixed(2)}</p>
+      <div className="results">
+        <div className="results-1">
+          <div>
+          <p>Tip Amount <span>/ person</span></p>
+          </div>
+          ${resultBill.toFixed(2)}
         </div>
-        <div>
-          <p>Total <span>/ person</span>{resultTotal.toFixed(2)}</p>
+        <div className="results-2">
+          <div>
+            <p>Total Amount <span>/ person</span></p>
+          </div>
+          ${resultTotal.toFixed(2)}
         </div>
       </div>
       <Button type="button" handleClick={handleReset} text="RESET" />

@@ -1,9 +1,81 @@
 $background-main: #D4E9EC;
+$background-secondary: #00474B;
 
 html {
   background-color: $background-main;
+  font-family: monospace;
+  font-size: 1.5em;
 }
 
 .App {
-  text-align: center;
+  h2 {
+    text-align: center;
+  }
+}
+
+.calculator {
+  background-color: white;
+  border-radius: 5%;
+  height: 100vh;
+  font-size: larger;
+
+  .bill {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12%;
+    margin-right: 12%;
+
+    input {
+      width: 80%
+    }
+  }
+
+  .tip {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 12%;
+    margin-right: 12%;
+
+    input {
+      width: 80%
+    }
+  }
+
+  .people {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+    margin-right: 6%;
+
+    input {
+      width: 80%
+    }
+  }
+
+  .results {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-secondary;
+    border-radius: 5%;
+    margin-left: 6%;
+    margin-right: 6%;
+    padding: 5%;
+
+    input {
+      width: 80%
+    }
+
+    .results-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .results-2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }

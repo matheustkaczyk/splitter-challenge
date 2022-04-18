@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="App">
-      SPLITTER
+      <h2>SPLITTER</h2>
       <Calculator />
     </div>
   )
