@@ -30,8 +30,6 @@ export const Calculator = () => {
     setResultBill(result);
   }, [billInput, peopleInput, percentageInput]);
 
-  console.log(resultTotal, resultBill, percentageInput, peopleInput, billInput)
-
   return(
     <div className="calculator">
       <div>
@@ -51,7 +49,12 @@ export const Calculator = () => {
         <Input type="number" handleChange={handlePeopleInput} />
       </div>
       <div>
-
+        <div>
+          <p>Tip Amount <span>/ person</span>{resultBill.toFixed(2)}</p>
+        </div>
+        <div>
+          <p>Total <span>/ person</span>{resultTotal.toFixed(2)}</p>
+        </div>
       </div>
     </div>
   )
