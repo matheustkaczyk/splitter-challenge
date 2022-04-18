@@ -4,12 +4,17 @@ import { Input } from '../Input';
 
 export const Calculator = () => {
   const [billInput, setBillInput] = useState(0);
-  const [peopleInput, setPeopleInput] = useState(0);
+  const [peopleInput, setPeopleInput] = useState(1);
   const [percentageInput, setPercentageInput] = useState(0);
-  const [result, setResult] = useState(0);
+  const [resultTotal, setResultTotal] = useState(0);
+  const [resultBill, setResultBill] = useState(0);
 
   const handleBillInput = (e) => {
     setBillInput(e.target.value);
+  }
+
+  const handlePeopleInput = (e) => {
+    setPeopleInput(e.target.value);
   }
 
   const handleClick = (value) => {
@@ -20,9 +25,12 @@ export const Calculator = () => {
     const bill = parseFloat(billInput);
     const people = parseInt(peopleInput);
     const percentage = parseFloat(percentageInput);
-    const result = (bill / people) * percentage;
-    setResult(result);
+    const result = ((bill / people) * percentage);
+    setResultTotal((bill / people) + result);
+    setResultBill(result);
   }, [billInput, peopleInput, percentageInput]);
+
+  console.log(resultTotal, resultBill, percentageInput, peopleInput, billInput)
 
   return(
     <div className="calculator">
@@ -32,7 +40,7 @@ export const Calculator = () => {
       </div>
       <div>
         Select Tip %
-        <Button type="button" handleClick={handleClick} text='5%' value={0.5} />
+        <Button type="button" handleClick={handleClick} text='5%' value={0.05} />
         <Button type="button" handleClick={handleClick} text='10%' value={0.10} />
         <Button type="button" handleClick={handleClick} text='15%' value={0.15} />
         <Button type="button" handleClick={handleClick} text='25%' value={0.25} />
@@ -40,7 +48,7 @@ export const Calculator = () => {
       </div>
       <div>
         Number of people
-        <Input />
+        <Input type="number" handleChange={handlePeopleInput} />
       </div>
       <div>
 
