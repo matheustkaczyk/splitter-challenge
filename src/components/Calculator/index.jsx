@@ -1,17 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '../Button';
 import { Input } from '../Input';
 
 export const Calculator = () => {
   const [billInput, setBillInput] = useState(0);
   const [peopleInput, setPeopleInput] = useState(0);
+  const [percentageInput, setPercentageInput] = useState(0);
   const [result, setResult] = useState(0);
 
   const handleBillInput = (e) => {
     setBillInput(e.target.value);
   }
 
-  const handleClick = () => {}
+  const handleClick = (value) => {
+    setPercentageInput(value);
+  }
+
+  useEffect(() => {
+    const bill = parseFloat(billInput);
+    const people = parseInt(peopleInput);
+    const percentage = parseFloat(percentageInput);
+    const result = (bill / people) * percentage;
+    setResult(result);
+  }, [billInput, peopleInput, percentageInput]);
 
   return(
     <div className="calculator">
