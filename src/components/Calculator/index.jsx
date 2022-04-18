@@ -1,14 +1,23 @@
+import { useState } from 'react';
 import { Button } from '../Button';
 import { Input } from '../Input';
 
 export const Calculator = () => {
+  const [billInput, setBillInput] = useState(0);
+  const [peopleInput, setPeopleInput] = useState(0);
+  const [result, setResult] = useState(0);
+
+  const handleBillInput = (e) => {
+    setBillInput(e.target.value);
+  }
+
   const handleClick = () => {}
 
   return(
     <div className="calculator">
       <div>
         Bill
-        <Input />
+        <Input type="number" handleChange={handleBillInput}  />
       </div>
       <div>
         Select Tip %
