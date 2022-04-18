@@ -3,11 +3,11 @@ import { Button } from '../Button';
 import { Input } from '../Input';
 
 export const Calculator = () => {
-  const [billInput, setBillInput] = useState(0);
+  const [billInput, setBillInput] = useState(0.00);
   const [peopleInput, setPeopleInput] = useState(1);
-  const [percentageInput, setPercentageInput] = useState(0);
-  const [resultTotal, setResultTotal] = useState(0);
-  const [resultBill, setResultBill] = useState(0);
+  const [percentageInput, setPercentageInput] = useState(0.00);
+  const [resultTotal, setResultTotal] = useState(0.00);
+  const [resultBill, setResultBill] = useState(0.00);
 
   const handleBillInput = (e) => {
     setBillInput(e.target.value);
@@ -19,6 +19,14 @@ export const Calculator = () => {
 
   const handleClick = (value) => {
     setPercentageInput(value);
+  }
+
+  const handleReset = () => {
+    setBillInput(0);
+    setPeopleInput(1);
+    setPercentageInput(0);
+    setResultTotal(0);
+    setResultBill(0);
   }
 
   useEffect(() => {
@@ -56,6 +64,7 @@ export const Calculator = () => {
           <p>Total <span>/ person</span>{resultTotal.toFixed(2)}</p>
         </div>
       </div>
+      <Button type="button" handleClick={handleReset} text="RESET" />
     </div>
   )
 }
