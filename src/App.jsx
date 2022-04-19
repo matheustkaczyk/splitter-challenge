@@ -1,11 +1,12 @@
 import './App.scss'
 import { Calculator } from './components/Calculator'
+import { Header } from './components/Header'
 
 function App() {
 
   return (
     <div className="App">
-      <h2>SPLITTER</h2>
+      <Header />
       <Calculator />
     </div>
   )

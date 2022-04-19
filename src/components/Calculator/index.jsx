@@ -60,19 +60,25 @@ export const Calculator = () => {
       </div>
       <div className="results">
         <div className="results-1">
-          <div>
-          <p>Tip Amount <span>/ person</span></p>
+          <div className="word-wrap">
+            <p>Tip Amount</p>
+            <span>/ person</span>
           </div>
-          ${resultBill.toFixed(2)}
+          <h2>
+            ${resultBill.toFixed(2)}
+          </h2>
         </div>
         <div className="results-2">
-          <div>
-            <p>Total Amount <span>/ person</span></p>
+          <div className="word-wrap">
+            <p>Total Amount</p>
+            <span>/ person</span>
           </div>
-          ${resultTotal.toFixed(2)}
+          <h2>
+            ${resultTotal.toFixed(2)}
+          </h2>
         </div>
+        <Button type="button" handleClick={handleReset} text="RESET" />
       </div>
-      <Button type="button" handleClick={handleReset} text="RESET" />
     </div>
   )
 }
