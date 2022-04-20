@@ -47,11 +47,11 @@ export const Calculator = () => {
       <div className="tip">
         Select Tip %
         <div>
-          <Button type="button" handleClick={handleClick} text='5%' value={0.05} />
-          <Button type="button" handleClick={handleClick} text='10%' value={0.10} />
-          <Button type="button" handleClick={handleClick} text='15%' value={0.15} />
-          <Button type="button" handleClick={handleClick} text='25%' value={0.25} />
-          <Button type="button" handleClick={handleClick} text='50%' value={0.50} />
+          <Button classN="btn" type="button" handleClick={handleClick} text='5%' value={0.05} />
+          <Button classN="btn" type="button" handleClick={handleClick} text='10%' value={0.10} />
+          <Button classN="btn" type="button" handleClick={handleClick} text='15%' value={0.15} />
+          <Button classN="btn" type="button" handleClick={handleClick} text='25%' value={0.25} />
+          <Button classN="btn" type="button" handleClick={handleClick} text='50%' value={0.50} />
         </div>
       </div>
       <div className="people">
@@ -77,7 +77,7 @@ export const Calculator = () => {
             ${resultTotal.toFixed(2)}
           </h2>
         </div>
-        <Button type="button" handleClick={handleReset} text="RESET" />
+        <Button type="button" classN="btn-reset" handleClick={handleReset} text="RESET" />
       </div>
     </div>
   )
