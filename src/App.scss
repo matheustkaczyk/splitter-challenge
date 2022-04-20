@@ -33,8 +33,18 @@ html {
     font-weight: bolder;
     margin-bottom: 2%;
 
-    input {
-      width: 80%
+    .bill-input-wrapper {
+      align-items: center;
+      background-color: #F3F8FB;
+      padding: 3%;
+
+      input {
+        width: 80%;
+        border: 0;
+        background-color: #F3F8FB;
+        resize: none;
+        outline: none;
+      }
     }
   }
 

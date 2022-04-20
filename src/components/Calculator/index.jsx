@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '../Button';
 import { Input } from '../Input';
+import iconDollar from '../../images/icon-dollar.svg';
 
 export const Calculator = () => {
   const [billInput, setBillInput] = useState(0.00);
@@ -42,7 +43,10 @@ export const Calculator = () => {
     <div className="calculator">
       <div className="bill">
         Bill
-        <Input type="number" handleChange={handleBillInput}  />
+        <div className="bill-input-wrapper">
+          <img src={iconDollar} />
+          <Input type="number" handleChange={handleBillInput}  />
+        </div>
       </div>
       <div className="tip">
         Select Tip %
