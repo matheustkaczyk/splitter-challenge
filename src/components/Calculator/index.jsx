@@ -16,6 +16,11 @@ export const Calculator = () => {
   }
 
   const handlePeopleInput = (e) => {
+    if (e.target.value === '') {
+      setPeopleInput(1);
+      return false;
+    };
+
     setPeopleInput(e.target.value);
   }
 
