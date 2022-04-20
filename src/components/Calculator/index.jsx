@@ -47,28 +47,30 @@ export const Calculator = () => {
 
   return(
     <div className="calculator">
-      <div className="bill">
-        Bill
-        <div className="bill-input-wrapper">
-          <img src={iconDollar} />
-          <Input type="number" handleChange={handleBillInput}  />
+      <div className="calculator-inner-wrapper">
+        <div className="bill">
+          Bill
+          <div className="bill-input-wrapper">
+            <img src={iconDollar} />
+            <Input type="number" handleChange={handleBillInput}  />
+          </div>
         </div>
-      </div>
-      <div className="tip">
-        Select Tip %
-        <div>
-          <Button classN="btn" type="button" handleClick={handleClick} text='5%' value={0.05} />
-          <Button classN="btn" type="button" handleClick={handleClick} text='10%' value={0.10} />
-          <Button classN="btn" type="button" handleClick={handleClick} text='15%' value={0.15} />
-          <Button classN="btn" type="button" handleClick={handleClick} text='25%' value={0.25} />
-          <Button classN="btn" type="button" handleClick={handleClick} text='50%' value={0.50} />
+        <div className="tip">
+          Select Tip %
+          <div>
+            <Button classN="btn" type="button" handleClick={handleClick} text='5%' value={0.05} />
+            <Button classN="btn" type="button" handleClick={handleClick} text='10%' value={0.10} />
+            <Button classN="btn" type="button" handleClick={handleClick} text='15%' value={0.15} />
+            <Button classN="btn" type="button" handleClick={handleClick} text='25%' value={0.25} />
+            <Button classN="btn" type="button" handleClick={handleClick} text='50%' value={0.50} />
+          </div>
         </div>
-      </div>
-      <div className="people">
-        Number of people
-        <div className="person-input-wrapper">
-          <img src={iconPerson} />
-          <Input type="number" handleChange={handlePeopleInput} />
+        <div className="people">
+          Number of people
+          <div className="person-input-wrapper">
+            <img src={iconPerson} />
+            <Input type="number" handleChange={handlePeopleInput} />
+          </div>
         </div>
       </div>
       <div className="results">
