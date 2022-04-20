@@ -6,4 +6,11 @@ html body {
   overflow: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  input {
+    text-align: right;
+    font-size: large;
+    font-weight: bold;
+    color: #00474B;
+  }
 }
