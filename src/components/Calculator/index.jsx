@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '../Button';
 import { Input } from '../Input';
+
 import iconDollar from '../../images/icon-dollar.svg';
 import iconPerson from '../../images/icon-person.svg';
 
