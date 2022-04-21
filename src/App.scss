@@ -67,7 +67,7 @@ html {
       border: 0;
       border-radius:5%;
       background-color: $btn-color;
-      width: 20%;
+      width: 30%;
       font-weight: bolder;
       font-size:medium;
       color: white;
@@ -162,13 +162,30 @@ html {
 }
 
 @media only screen and (min-width: 600px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+  }
+
   .calculator {
     display: flex;
-    margin: 0;
-    width: 60vw;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40vw;
+    height: auto;
 
-    .results {
-      width: 80%;
+    .calculator-inner-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 3%;
     }
+  }
+
+  .results {
+    margin: 3%;
   }
 }
