@@ -69,7 +69,7 @@ export const Calculator = () => {
           Number of people
           <div className="person-input-wrapper">
             <img src={iconPerson} />
-            <Input type="number" handleChange={handlePeopleInput} />
+            <Input type="text" handleChange={handlePeopleInput} />
           </div>
         </div>
       </div>
