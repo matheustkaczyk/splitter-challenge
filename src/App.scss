@@ -161,6 +161,65 @@ html {
   }
 }
 
+@media only screen and (min-width: 700px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+  }
+
+  .calculator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80vw;
+    height: auto;
+
+    .calculator-inner-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 3%;
+    }
+  }
+
+  .results {
+    margin: 3%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+  }
+
+  .calculator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60vw;
+    height: auto;
+
+    .calculator-inner-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 3%;
+    }
+  }
+
+  .results {
+    margin: 3%;
+  }
+}
+
+
 @media only screen and (min-width: 1290px) {
   .App {
     display: flex;
